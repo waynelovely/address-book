@@ -52,4 +52,5 @@ void search_entries( char * field, char *value );
 // add the entry the list
 int add_entry_to_list( struct entry *entry_to_add );
 
-void enter_address();
+void delete_entry(struct entry *e);
+

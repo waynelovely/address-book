@@ -132,37 +132,38 @@ int add_entry_to_list( struct entry *entry_to_add ) {
   return 0;
 }
 
-void enter_address() {
 
-  struct entry *fresh_entry;
+void delete_entry(struct entry *e) {
 
-  char name[NAME_MAX_SIZE];
-  char address1[ADDRESS1_MAX_SIZE];
-  char address2[ADDRESS2_MAX_SIZE];
-  char city[CITY_MAX_SIZE];
-  char state[STATE_MAX_SIZE];
-  char zip[ZIP_MAX_SIZE];
+  struct entry *current=head;
 
-  printf("Enter Name:");
-  gets(name);
+  while (current) {
 
-  printf("Enter Address1:");
-  gets(address1);
+    if ( current == e ) {
 
-  printf("Enter Address2:");
-  gets(address2);
+      if ( e == head ) {
+        head = e->next;
+      }
 
-  printf("Enter City:");
-  gets(city);
+      if ( e == tail ) {
+        tail = e->prev;
+      }
 
-  printf("Enter State:");
-  gets(state);
+      if ( e->prev ) {
+        e->prev->next = e->next;
+      }
 
-  printf("Enter Zip:");
-  gets(zip);
+      if ( e->next ) {
+        e->next->prev = e->prev;
+      }
 
-  fresh_entry = new_entry(name, address1, address2, city, state, zip);
-  add_entry_to_list(fresh_entry);
+      free(e);
+      break;
+    }
+
+    current = current->next;
+  }
+
 
 }
 

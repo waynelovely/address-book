@@ -12,6 +12,9 @@
 
 #include "list.h"
 
+void run_menu();
+void enter_address();
+
 
 int main() {
 
@@ -57,5 +60,94 @@ int main() {
   printf("Search against address for '666 W Main St'\n");
   search_entries( "address1", "666 W Main St" );
 
+  delete_entry( head );
+
+  list_entries();
+
+  // enter_address();
+
+  list_entries();
+
+  run_menu();
+
   return 0;
+}
+
+
+
+
+
+void enter_address() {
+
+  struct entry *fresh_entry;
+
+  char name[NAME_MAX_SIZE];
+  char address1[ADDRESS1_MAX_SIZE];
+  char address2[ADDRESS2_MAX_SIZE];
+  char city[CITY_MAX_SIZE];
+  char state[STATE_MAX_SIZE];
+  char zip[ZIP_MAX_SIZE];
+
+  printf("Enter Name:");
+  gets(name);
+
+  printf("Enter Address1:");
+  gets(address1);
+
+  printf("Enter Address2:");
+  gets(address2);
+
+  printf("Enter City:");
+  gets(city);
+
+  printf("Enter State:");
+  gets(state);
+
+  printf("Enter Zip:");
+  gets(zip);
+
+  fresh_entry = new_entry(name, address1, address2, city, state, zip);
+  add_entry_to_list(fresh_entry);
+
+
+}
+
+void run_menu() {
+
+  int run = 1;
+  
+  char choice[10];
+
+  printf("\nPlease enter a choice:\n");
+  printf("1) List Addresses\n");
+  printf("2) Enter Address\n");
+  printf("3) Delete Address\n");
+  printf("4) Quit\n");
+
+  while (run) {
+
+    gets(choice);
+
+    if ( strncmp( choice, "1", 1 ) == 0 ) {
+      list_entries();
+    } else if ( strncmp( choice, "2", 1 ) == 0 ) {
+      enter_address();
+    } else if ( strncmp( choice, "3", 1 ) == 0 ) {
+      printf("Chose 3\n");
+    } else if ( strncmp( choice, "4", 1 ) == 0 ) {
+      run = 0;
+    } else {
+      printf("Invalid choice\n");
+    }
+
+    if (run) {
+      printf("\nPlease enter a choice:\n");
+      printf("1) List Addresses\n");
+      printf("2) Enter Address\n");
+      printf("3) Delete Address\n");
+      printf("4) Quit\n");
+    }
+    
+  }
+
 }
