@@ -54,7 +54,7 @@ int main() {
 
   list_entries();
 
-  printf("Search on name for 'Wayne Lovely'\n");
+  printf("Search against address for '666 W Main St'\n");
   search_entries( "address1", "666 W Main St" );
 
   return 0;
