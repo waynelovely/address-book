@@ -47,6 +47,8 @@ void list_entries();
 
 void print_entry(struct entry *this_entry);
 
+struct entry *retrieve_entry( char * name, char * value );
+
 void search_entries( char * field, char *value );
 
 // add the entry the list

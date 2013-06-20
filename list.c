@@ -57,6 +57,53 @@ void print_entry(struct entry *this_entry) {
 }
 
 /*
+ * retrieve_entry - just return the first entry in which the name matches
+ */
+struct entry *retrieve_entry( char * field, char * value ) {
+
+  struct entry *current=head;
+
+  while (current) {
+
+    if ( (!strncmp(field, "name", 4)) && 
+         (!strncmp(current->name, value, NAME_MAX_SIZE)) ) {
+      return current;
+    }
+
+    if ( (!strncmp(field, "address1", 8)) && 
+         (!strncmp(current->address1, value, ADDRESS1_MAX_SIZE)) ) {
+      return current;
+    }
+
+    if ( (!strncmp(field, "address2", 8)) && 
+         (!strncmp(current->address2, value, ADDRESS2_MAX_SIZE)) ) {
+      return current;
+    }
+
+    if ( (!strncmp(field, "city", 4)) && 
+         (!strncmp(current->city, value, CITY_MAX_SIZE)) ) {
+      return current;
+    }
+
+    if ( (!strncmp(field, "state", 5)) && 
+         (!strncmp(current->state, value, STATE_MAX_SIZE)) ) {
+      return current;
+    }
+
+    if ( (!strncmp(field, "zip", 3)) && 
+         (!strncmp(current->zip, value, ZIP_MAX_SIZE)) ) {
+      return current;
+    }
+
+    current = current->next;
+  }
+
+  // return NULL if we fall of the end of the list
+  return current;
+}
+
+
+/*
  * search_entries
  */
 void search_entries( char * field, char * value ) {

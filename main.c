@@ -115,8 +115,12 @@ void enter_address() {
 void run_menu() {
 
   int run = 1;
-  
   char choice[10];
+  char name[50];
+  struct entry *entry_to_delete;
+
+  memset( choice, 0, 10 );
+  memset( name,   0, 50 );
 
   printf("\nPlease enter a choice:\n");
   printf("1) List Addresses\n");
@@ -133,7 +137,12 @@ void run_menu() {
     } else if ( strncmp( choice, "2", 1 ) == 0 ) {
       enter_address();
     } else if ( strncmp( choice, "3", 1 ) == 0 ) {
-      printf("Chose 3\n");
+
+      printf("Enter a name to delete from the list: ");
+      gets(name);
+      entry_to_delete = retrieve_entry( "name", name );
+      delete_entry(entry_to_delete);
+
     } else if ( strncmp( choice, "4", 1 ) == 0 ) {
       run = 0;
     } else {
