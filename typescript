@@ -1,0 +1,418 @@
+Script started on Thu 20 Jun 2013 11:19:19 PM EDT
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# make clean
+rm main
+rm: cannot remove `main': No such file or directory
+make: *** [clean] Error 1
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# ls -la 
+total 44
+drwxr-xr-x 3 root root 4096 Jun 20 23:19 [0m[01;34m.[0m
+drwxr-xr-x 3 root root 4096 Jun 20 23:13 [01;34m..[0m
+-rw-r--r-- 1 root root 3390 Jun 20 23:09 dbclient.c
+-rw-r--r-- 1 root root  461 Jun 20 22:41 dbclient.h
+drwxr-xr-x 8 root root 4096 Jun 20 23:15 [01;34m.git[0m
+-rw-r--r-- 1 root root 5128 Jun 20 23:04 list.c
+-rw-r--r-- 1 root root 1233 Jun 20 22:51 list.h
+-rw-r--r-- 1 root root 2936 Jun 20 23:12 main.c
+-rw-r--r-- 1 root root  201 Jun 20 09:18 Makefile
+-rw-r--r-- 1 root root   56 Jun 19 21:17 README.md
+-rw-r--r-- 1 root root    0 Jun 20 23:19 typescript
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# make
+gcc -o main main.c list.c dbclient.c `mysql_config --libs` `mysql_config --cflags`
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# ls -la 
+total 76
+drwxr-xr-x 3 root root  4096 Jun 20 23:19 [0m[01;34m.[0m
+drwxr-xr-x 3 root root  4096 Jun 20 23:13 [01;34m..[0m
+-rw-r--r-- 1 root root  3390 Jun 20 23:09 dbclient.c
+-rw-r--r-- 1 root root   461 Jun 20 22:41 dbclient.h
+drwxr-xr-x 8 root root  4096 Jun 20 23:15 [01;34m.git[0m
+-rw-r--r-- 1 root root  5128 Jun 20 23:04 list.c
+-rw-r--r-- 1 root root  1233 Jun 20 22:51 list.h
+-rwxr-xr-x 1 root root 30508 Jun 20 23:19 [01;32mmain[0m
+-rw-r--r-- 1 root root  2936 Jun 20 23:12 main.c
+-rw-r--r-- 1 root root   201 Jun 20 09:18 Makefile
+-rw-r--r-- 1 root root    56 Jun 19 21:17 README.md
+-rw-r--r-- 1 root root     0 Jun 20 23:19 typescript
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# ./main localhost XXXXX XXXXX addressbook
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+1
+
+NOTICE: The list is empty
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+5
+
+NOTICE: The list is empty
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+1
+
+Addresses in memory:
+
+NAME           : aaaa
+ADDRESS1       : a
+ADDRESS2       : a
+CITY,STATE,ZIP : a,a,a
+
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+3
+Enter a name to delete from the list: aaaa
+
+Removing first entry with name of 'aaaa'
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+1
+
+NOTICE: The list is empty
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+6
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+1
+
+NOTICE: The list is empty
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+2
+Enter Name:Bob Smiht  th
+Enter Address1:123 W Main
+Enter Address2:
+Enter City:Kalamz azoo
+Enter State:MI
+Enter Zip:49007
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+1
+
+Addresses in memory:
+
+NAME           : Bob Smith
+ADDRESS1       : 123 W Main
+ADDRESS2       : 
+CITY,STATE,ZIP : Kalamazoo,MI,49007
+
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+2
+Enter Name:James Taylor
+Enter Address1:29487 Small Lane
+Enter Address2:
+Enter City:Portage
+Enter State:MI
+Enter Zip:49024
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+1
+
+Addresses in memory:
+
+NAME           : Bob Smith
+ADDRESS1       : 123 W Main
+ADDRESS2       : 
+CITY,STATE,ZIP : Kalamazoo,MI,49007
+
+
+NAME           : James Taylor
+ADDRESS1       : 29487 Small Lane
+ADDRESS2       : 
+CITY,STATE,ZIP : Portage,MI,49024
+
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+6
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+7
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# ./main localhost XXXXX XXXXX addressbook
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+1
+
+NOTICE: The list is empty
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+5
+
+NOTICE: The list is empty
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+1
+
+Addresses in memory:
+
+NAME           : Bob Smith
+ADDRESS1       : 123 W Main
+ADDRESS2       : 
+CITY,STATE,ZIP : Kalamazoo,MI,49007
+
+
+NAME           : James Taylor
+ADDRESS1       : 29487 Small Lane
+ADDRESS2       : 
+CITY,STATE,ZIP : Portage,MI,49024
+
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+3
+Enter a name to delete from the list: Bob Smith
+
+Removing first entry with name of 'Bob Smith'
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+1
+
+Addresses in memory:
+
+NAME           : James Taylor
+ADDRESS1       : 29487 Small Lane
+ADDRESS2       : 
+CITY,STATE,ZIP : Portage,MI,49024
+
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+6
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+7
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# ./main localhost XXXXX XXXXX addressbook
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+5
+
+NOTICE: The list is empty
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+1
+
+Addresses in memory:
+
+NAME           : James Taylor
+ADDRESS1       : 29487 Small Lane
+ADDRESS2       : 
+CITY,STATE,ZIP : Portage,MI,49024
+
+
+Please enter a choice:
+1) List Addresses
+2) Enter Address
+3) Delete Address
+4) Wipe List from Memory
+5) Load List from Database
+6) Store List to Database
+7) Quit
+7
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# mysql -p addressbook
+Enter password: 
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 187
+Server version: 5.5.31-0ubuntu0.12.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> desc entries;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| name     | varchar(50) | NO   |     | NULL    |       |
+| address1 | varchar(50) | YES  |     | NULL    |       |
+| address2 | varchar(50) | YES  |     | NULL    |       |
+| city     | varchar(30) | YES  |     | NULL    |       |
+| state    | varchar(2)  | YES  |     | NULL    |       |
+| zip      | varchar(10) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> select * from entries;
++--------------+------------------+----------+---------+-------+-------+
+| name         | address1         | address2 | city    | state | zip   |
++--------------+------------------+----------+---------+-------+-------+
+| James Taylor | 29487 Small Lane |          | Portage | MI    | 49024 |
++--------------+------------------+----------+---------+-------+-------+
+1 row in set (0.00 sec)
+
+mysql> quit
+Bye
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
+]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# exit
+
+Script done on Thu 20 Jun 2013 11:22:31 PM EDT
