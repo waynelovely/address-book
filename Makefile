@@ -18,5 +18,5 @@ dbsupport:
 	cc -o main main.c list.c dbclient.c `mysql_config --libs` `mysql_config --cflags` -DDBSUPPORT
 
 clean:
-	rm main
+	rm -f main
 
