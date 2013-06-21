@@ -1,3 +1,12 @@
+/*
+ *
+ *  Created by Wayne Lovely on 6/20/13.
+ *  Copyright (c) 2013 Wayne Lovely. All rights reserved.
+ *
+ *  Routines for managing an linked list
+ */
+
+
 #include "list.h"
 
 /*

@@ -1,5 +1,9 @@
 /*
- * Adapting code from the docs for the MySQL C client library
+ *
+ *  Created by Wayne Lovely on 6/20/13.
+ *  Copyright (c) 2013 Wayne Lovely. All rights reserved.
+ *
+ *  Adapting code from the docs for the MySQL C client library
  */
 
 #include <stdio.h>

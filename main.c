@@ -1,4 +1,9 @@
 /*
+ *
+ *  Created by Wayne Lovely on 6/20/13.
+ *  Copyright (c) 2013 Wayne Lovely. All rights reserved.
+ *
+ *
  * A demo program in C for company X
  *
  * We wish to do a few things:
@@ -26,6 +31,7 @@ int main(int argc, char *argv[]) {
 
   tail = head = NULL;
 
+#ifdef DBSUPPORT
   if ( argc != 5 ) {
     printf("Usage: main DBHOST DBUSER DBPASS DATABASE\n");
     exit(-1);
@@ -37,10 +43,13 @@ int main(int argc, char *argv[]) {
   strcpy( db_name,     argv[4] );
 
   dbconnect();
+#endif
 
   run_menu();
 
+#ifdef DBSUPPORT
   dbdisconnect();
+#endif
 
   return 0;
 }
@@ -102,8 +111,10 @@ void run_menu() {
   printf("2) Enter Address\n");
   printf("3) Delete Address\n");
   printf("4) Wipe List from Memory\n");
+#ifdef DBSUPPORT
   printf("5) Load List from Database\n");
   printf("6) Store List to Database\n");
+#endif
   printf("7) Quit\n");
 
   while (run) {
@@ -123,10 +134,12 @@ void run_menu() {
 
     } else if ( strncmp( choice, "4", 1 ) == 0 ) {
       delete_list();
+#ifdef DBSUPPORT
     } else if ( strncmp( choice, "5", 1 ) == 0 ) {
       hydrate();
     } else if ( strncmp( choice, "6", 1 ) == 0 ) {
       persist();
+#endif
     } else if ( strncmp( choice, "7", 1 ) == 0 ) {
       run = 0;
     } else {
@@ -139,8 +152,10 @@ void run_menu() {
       printf("2) Enter Address\n");
       printf("3) Delete Address\n");
       printf("4) Wipe List from Memory\n");
+#ifdef DBSUPPORT
       printf("5) Load List from Database\n");
       printf("6) Store List to Database\n");
+#endif
       printf("7) Quit\n");
     }
     
