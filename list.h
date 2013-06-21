@@ -45,6 +45,9 @@ struct entry *new_entry( char *name, char *address1, char *address2, char *city,
 // print the entries
 void list_entries();
 
+// delete the list
+void delete_list();
+
 void print_entry(struct entry *this_entry);
 
 struct entry *retrieve_entry( char * name, char * value );

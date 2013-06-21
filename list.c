@@ -16,8 +16,6 @@ struct entry *new_entry( char *name, char *address1, char *address2, char *city,
 
   memset( fresh_entry, 0, sizeof( struct entry ) );
 
-  printf( "incoming state = %s\n", state );
-
   strncpy( fresh_entry->name,     name,     NAME_MAX_SIZE );
   strncpy( fresh_entry->address1, address1, ADDRESS1_MAX_SIZE );
   strncpy( fresh_entry->address2, address2, ADDRESS2_MAX_SIZE );
@@ -36,10 +34,43 @@ void list_entries() {
 
   struct entry *current=head;
 
+  if (!current) {
+    printf("\nNOTICE: The list is empty\n");
+    return;
+  }
+
+  printf("\nAddresses in memory:\n");
+
   while (current) {
-    printf("name on this node = %s\n", current->name);
+    print_entry(current);
     current = current->next;
   }
+
+}
+
+/*
+ * delete_list - wipe out all entries
+ */
+void delete_list() {
+
+  struct entry *current=head;
+
+  if (!head) {
+    printf("\nNOTICE: The list is empty\n");
+    return;
+  }
+
+  while (head) {
+    head = current->next;
+
+    if (current) {
+      free(current);
+    }
+
+    current = head;
+  }
+
+  tail = head;
 
 }
 
@@ -49,6 +80,7 @@ void list_entries() {
  */
 void print_entry(struct entry *this_entry) {
 
+  printf("\n");
   printf("NAME           : %s\n", this_entry->name);
   printf("ADDRESS1       : %s\n", this_entry->address1);
   printf("ADDRESS2       : %s\n", this_entry->address2);
@@ -157,6 +189,7 @@ int add_entry_to_list( struct entry *entry_to_add ) {
   struct entry *current;
 
   if (!entry_to_add) {
+    printf("\nNOTICE: empty entry was passed in\n");
     return EMPTY_ENTRY;
   }
 
@@ -165,8 +198,6 @@ int add_entry_to_list( struct entry *entry_to_add ) {
     tail->prev = NULL;
     tail->next = NULL;
   } else {
-
-    printf("we had a head node, append to list and move tail pointer\n");
 
     // set up prev & next on new entry then move tail to the new end of list
     entry_to_add->prev = tail;
@@ -204,7 +235,9 @@ void delete_entry(struct entry *e) {
         e->next->prev = e->prev;
       }
 
+      printf("\nRemoving first entry with name of '%s'\n", e->name);
       free(e);
+
       break;
     }
 
