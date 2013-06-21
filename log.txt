@@ -1,46 +1,46 @@
 Script started on Thu 20 Jun 2013 11:19:19 PM EDT
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# make clean
+]0;: ~/XXXXX/address-book# make clean
 rm main
 rm: cannot remove `main': No such file or directory
 make: *** [clean] Error 1
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# ls -la 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# ls -la 
 total 44
-drwxr-xr-x 3 root root 4096 Jun 20 23:19 [0m[01;34m.[0m
-drwxr-xr-x 3 root root 4096 Jun 20 23:13 [01;34m..[0m
--rw-r--r-- 1 root root 3390 Jun 20 23:09 dbclient.c
--rw-r--r-- 1 root root  461 Jun 20 22:41 dbclient.h
-drwxr-xr-x 8 root root 4096 Jun 20 23:15 [01;34m.git[0m
--rw-r--r-- 1 root root 5128 Jun 20 23:04 list.c
--rw-r--r-- 1 root root 1233 Jun 20 22:51 list.h
--rw-r--r-- 1 root root 2936 Jun 20 23:12 main.c
--rw-r--r-- 1 root root  201 Jun 20 09:18 Makefile
--rw-r--r-- 1 root root   56 Jun 19 21:17 README.md
--rw-r--r-- 1 root root    0 Jun 20 23:19 typescript
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# make
+drwxr-xr-x 3 XXXXX XXXXX 4096 Jun 20 23:19 .
+drwxr-xr-x 3 XXXXX XXXXX 4096 Jun 20 23:13 ..
+-rw-r--r-- 1 XXXXX XXXXX 3390 Jun 20 23:09 dbclient.c
+-rw-r--r-- 1 XXXXX XXXXX  461 Jun 20 22:41 dbclient.h
+drwxr-xr-x 8 XXXXX XXXXX 4096 Jun 20 23:15 .git
+-rw-r--r-- 1 XXXXX XXXXX 5128 Jun 20 23:04 list.c
+-rw-r--r-- 1 XXXXX XXXXX 1233 Jun 20 22:51 list.h
+-rw-r--r-- 1 XXXXX XXXXX 2936 Jun 20 23:12 main.c
+-rw-r--r-- 1 XXXXX XXXXX  201 Jun 20 09:18 Makefile
+-rw-r--r-- 1 XXXXX XXXXX   56 Jun 19 21:17 README.md
+-rw-r--r-- 1 XXXXX XXXXX    0 Jun 20 23:19 typescript
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# make
 gcc -o main main.c list.c dbclient.c `mysql_config --libs` `mysql_config --cflags`
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# ls -la 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# ls -la 
 total 76
-drwxr-xr-x 3 root root  4096 Jun 20 23:19 [0m[01;34m.[0m
-drwxr-xr-x 3 root root  4096 Jun 20 23:13 [01;34m..[0m
--rw-r--r-- 1 root root  3390 Jun 20 23:09 dbclient.c
--rw-r--r-- 1 root root   461 Jun 20 22:41 dbclient.h
-drwxr-xr-x 8 root root  4096 Jun 20 23:15 [01;34m.git[0m
--rw-r--r-- 1 root root  5128 Jun 20 23:04 list.c
--rw-r--r-- 1 root root  1233 Jun 20 22:51 list.h
--rwxr-xr-x 1 root root 30508 Jun 20 23:19 [01;32mmain[0m
--rw-r--r-- 1 root root  2936 Jun 20 23:12 main.c
--rw-r--r-- 1 root root   201 Jun 20 09:18 Makefile
--rw-r--r-- 1 root root    56 Jun 19 21:17 README.md
--rw-r--r-- 1 root root     0 Jun 20 23:19 typescript
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# ./main localhost XXXXX XXXXX addressbook
+drwxr-xr-x 3 XXXXX XXXXX  4096 Jun 20 23:19 [0m[01;34m.[0m
+drwxr-xr-x 3 XXXXX XXXXX  4096 Jun 20 23:13 [01;34m..[0m
+-rw-r--r-- 1 XXXXX XXXXX  3390 Jun 20 23:09 dbclient.c
+-rw-r--r-- 1 XXXXX XXXXX   461 Jun 20 22:41 dbclient.h
+drwxr-xr-x 8 XXXXX XXXXX  4096 Jun 20 23:15 [01;34m.git[0m
+-rw-r--r-- 1 XXXXX XXXXX  5128 Jun 20 23:04 list.c
+-rw-r--r-- 1 XXXXX XXXXX  1233 Jun 20 22:51 list.h
+-rwxr-xr-x 1 XXXXX XXXXX 30508 Jun 20 23:19 [01;32mmain[0m
+-rw-r--r-- 1 XXXXX XXXXX  2936 Jun 20 23:12 main.c
+-rw-r--r-- 1 XXXXX XXXXX   201 Jun 20 09:18 Makefile
+-rw-r--r-- 1 XXXXX XXXXX    56 Jun 19 21:17 README.md
+-rw-r--r-- 1 XXXXX XXXXX     0 Jun 20 23:19 typescript
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# ./main localhost XXXXX XXXXX addressbook
 
 Please enter a choice:
 1) List Addresses
@@ -224,9 +224,9 @@ Please enter a choice:
 6) Store List to Database
 7) Quit
 7
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# ./main localhost XXXXX XXXXX addressbook
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# ./main localhost XXXXX XXXXX addressbook
 
 Please enter a choice:
 1) List Addresses
@@ -326,9 +326,9 @@ Please enter a choice:
 6) Store List to Database
 7) Quit
 7
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# ./main localhost XXXXX XXXXX addressbook
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# ./main localhost XXXXX XXXXX addressbook
 
 Please enter a choice:
 1) List Addresses
@@ -369,9 +369,9 @@ Please enter a choice:
 6) Store List to Database
 7) Quit
 7
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# mysql -p addressbook
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# mysql -p addressbook
 Enter password: 
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
@@ -411,8 +411,8 @@ mysql> select * from entries;
 
 mysql> quit
 Bye
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# 
-]0;root@li296-158: ~/maestro/address-bookroot@li296-158:~/maestro/address-book# exit
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# 
+]0;: ~/XXXXX/address-book:~/XXXXX/address-book# exit
 
 Script done on Thu 20 Jun 2013 11:22:31 PM EDT
