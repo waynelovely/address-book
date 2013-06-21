@@ -4,6 +4,9 @@
 
 #include "dbclient.h"
 
+/*
+ * dbconnect - build the context for talking to mysql
+ */
 void dbconnect() {
   mysql_init(&mysql);
   mysql_options(&mysql,MYSQL_READ_DEFAULT_GROUP,"main");
@@ -14,12 +17,16 @@ void dbconnect() {
   }
 }
 
+// dbdisconnect - close the connect and free the memory for the connection variable
 void dbdisconnect() {
   // close out the connection
   mysql_close(&mysql);
 }
 
 
+/*
+ * persist - save the list in memory to the database
+ */
 void persist() {
 
   struct entry *current=head;
@@ -82,6 +89,9 @@ void persist() {
 
 }
 
+/*
+ * hydrate - pull list from database table and create list in memory
+ */
 void hydrate() {
 
   MYSQL_RES *result;

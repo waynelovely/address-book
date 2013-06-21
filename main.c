@@ -12,6 +12,7 @@
 
 #include "list.h"
 
+// get these parameters from the command line
 char db_host[50];
 char db_username[50];
 char db_password[50];
@@ -46,8 +47,9 @@ int main(int argc, char *argv[]) {
 
 
 
-
-
+/*
+ * enter_address - collect data for address fields and make an entry in the list in memory
+ */
 void enter_address() {
 
   struct entry *fresh_entry;
@@ -80,9 +82,11 @@ void enter_address() {
   fresh_entry = new_entry(name, address1, address2, city, state, zip);
   add_entry_to_list(fresh_entry);
 
-
 }
 
+/*
+ * run_menu - run a simple menu for user interaction
+ */
 void run_menu() {
 
   int run = 1;

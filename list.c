@@ -75,8 +75,7 @@ void delete_list() {
 }
 
 /*
- * print_entry
- *
+ * print_entry - pretty format an entry in the list
  */
 void print_entry(struct entry *this_entry) {
 
@@ -136,7 +135,7 @@ struct entry *retrieve_entry( char * field, char * value ) {
 
 
 /*
- * search_entries
+ * search_entries - debug function,print out first entry meeting field/value criteria
  */
 void search_entries( char * field, char * value ) {
 
@@ -210,7 +209,10 @@ int add_entry_to_list( struct entry *entry_to_add ) {
   return 0;
 }
 
-
+/*
+ * delete_entry - fix up the pointers to cut the specified entry out of the list, 
+ * then free the memory for this entry
+ */
 void delete_entry(struct entry *e) {
 
   struct entry *current=head;
